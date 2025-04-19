@@ -13,7 +13,8 @@ export type InputControllerProps<T extends FieldValues> = Omit<
   React.ComponentProps<"input">,
   "name"
 > & {
-    name: Path<T>;
+  name: Path<T>;
+  className?: string;
   errorClassName?: string;
   rules?: Parameters<typeof Controller>["0"]["rules"];
 };
@@ -43,7 +44,7 @@ const InputControllerInner = <T extends FieldValues>(
             className={cn(className, error && errorClassName)}
           />
           {error?.message && (
-            <div className="text-red-500 text-sm mt-1">{error.message}</div>
+            <div className="text-red-500 text-[0.8rem]">{error.message}</div>
           )}
         </div>
       )}

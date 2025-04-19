@@ -16,7 +16,7 @@ export const Background: React.FC<BackgroundProps> = ({
         )}
         {...props}
       >
-        <div className="absolute inset-0 overflow-hidden bg-gradient-to-b from-[rgb(235,237,244)] to-white">
+        <div className="absolute inset-0 overflow-hidden bg-[rgb(28,28,28)]">
           {children}
         </div>
       </div>
